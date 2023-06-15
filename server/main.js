@@ -1,7 +1,20 @@
 import { Meteor } from 'meteor/meteor';
 
+Meteor.methods({
+  testApiKey() {
+    const apiKey = process.env.OPENAI_API_KEY;
+    console.log('API Key:', apiKey);
+  },
+});
+
+
 Meteor.startup(() => {
   // code to run on server at startup
+
+
+  Meteor.call('testApiKey');
+
+  
 });
 
 
