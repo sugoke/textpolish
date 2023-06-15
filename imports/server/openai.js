@@ -1,6 +1,6 @@
 import { HTTP } from 'meteor/http';
 
-const apiKey = 'YOUR_OPENAI_API_KEY'; // Replace with your OpenAI API key
+const apiKey = Meteor.settings.private.OPENAI_API_KEY; // Replace with your OpenAI API key
 
 Meteor.methods({
   enhanceText(text, language) {
