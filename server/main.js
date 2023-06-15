@@ -4,6 +4,9 @@ Meteor.methods({
   testApiKey() {
     const apiKey = Meteor.settings.private.OPENAI_API_KEY;
     console.log('API Key:', apiKey);
+
+    const apiKey = process.env.OPENAI_API_KEY;
+    console.log('API Key:', apiKey);
   },
 });
 
