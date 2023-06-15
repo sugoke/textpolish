@@ -1,0 +1,37 @@
+<head>
+  <title>Meteor App</title>
+</head>
+
+<body>
+  <h1>Text Enhancer</h1>
+
+  {{> inputForm}}
+  {{> enhancedText}}
+</body>
+
+<template name="inputForm">
+  <form>
+    <label for="text">Text:</label>
+    <textarea id="text" rows="5" cols="50"></textarea>
+
+    <label for="language">Language:</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+      <!-- Add more language options here -->
+    </select>
+
+    <button type="submit">Enhance Text</button>
+  </form>
+</template>
+
+<template name="enhancedText">
+  {{#if enhancedText}}
+    <div>
+      <h2>Enhanced Text:</h2>
+      <p>{{enhancedText}}</p>
+      <button id="copyBtn">Copy</button>
+    </div>
+  {{/if}}
+</template>
